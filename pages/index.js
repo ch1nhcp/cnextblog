@@ -23,6 +23,13 @@ const DUMMY_POSTS = [
     date: "2024-03-21",
     slug: "img3",
   },
+  {
+    title: "blog4",
+    image: "sunset.jpg",
+    excerpt: "lorem ipsum dolor sit amet, consectetur adip",
+    date: "2024-03-21",
+    slug: "img4",
+  },
 ];
 
 function HomePage() {
