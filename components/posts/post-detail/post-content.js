@@ -4,6 +4,9 @@ import ReactMarkdown from "react-markdown";
 import PostHeader from "./post-header";
 import classes from "./post-content.module.css";
 
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { coldarkDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
 function PostContent({ post }) {
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
 
@@ -37,6 +40,17 @@ function PostContent({ post }) {
       }
 
       return <p>{paragraph.children}</p>;
+    },
+    code(code) {
+      const { className, children } = code;
+      const language = className.split("-")[1]; // className is something like language-js => We need the "js" part here
+      return (
+        <SyntaxHighlighter
+          style={coldarkDark}
+          language={language}
+          children={children}
+        />
+      );
     },
   };
 
