@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with NextJS"
-date: "2024-03-03"
-image: img1.jpg
+date: "2024-03-12"
+image: sunset.jpg
 excerpt: NextJS is a the React framework for production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR.
 isFeatured: true
 ---
